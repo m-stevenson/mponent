@@ -1,62 +1,89 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card } from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
-import { ThemeToggle } from "./components/utils/ThemeToggle";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from "@/components/ui/card";
+import { Navbar } from "./components/utils/Navbar";
+import { Badge } from "./components/ui/badge";
+import { Separator } from "./components/ui/separator";
 
 function App() {
   return (
     <div className="p-6 space-y-4">
-      <ThemeToggle></ThemeToggle>
+      <Navbar></Navbar>
 
       <div className="space-x-4">
-        <Button variant="primary" size="lg">
-          Button
+        <Button variant="primary" size="sm">
+          Primary
         </Button>
-        <Button variant="secondary" size="lg">
-          Button
+        <Button variant="secondary" size="sm">
+          Secondary
         </Button>
-        <Button variant="destructive" size="lg">
-          Button
+        <Button variant="destructive" size="sm">
+          Destructive
         </Button>
-        <Button variant="glass" size="lg">
-          Button
-        </Button>
-        <Button variant="glass" size="md">
-          Button
-        </Button>
-        <Button variant="glass" size="sm">
-          Button
+        <Button variant="ghost" size="sm">
+          Ghost
         </Button>
       </div>
 
-      <div className="space-x-4 space-y-4 max-w-md flex flex-cols-2">
-        <Input
-          placeholder="Enter input..."
-          className="glass focus:ring-blue-100 focus:ring-2"
-        ></Input>
-      </div>
+      <Card className="max-w-md">
+        <CardHeader>
+          <CardTitle>Account Settings</CardTitle>
+          <CardDescription>Manage your profile information.</CardDescription>
+        </CardHeader>
 
-      <Card className="glass max-w-xl pb-24">
-        <h2 className="text-2xl text-cream">Card Title</h2>
-        <p className="text-sm text-gray-500 pt-2">Username</p>
-        <div className="space-y-2">
-          <Input
-            placeholder="Enter input..."
-            className="glass focus:ring-blue-100 focus:ring-2"
-          ></Input>
-        </div>
-        <p className="text-sm text-gray-500 pt-2">Password</p>
-        <div className="space-y-2">
-          <Input
-            placeholder="Enter input..."
-            className="glass focus:ring-blue-100 focus:ring-2"
-          ></Input>
-        </div>
+        <CardContent>
+          <p className="text-sm text-foreground">
+            This is the main card content.
+          </p>
+        </CardContent>
+
+        <CardFooter>
+          <Button variant="primary" size="sm">
+            Save
+          </Button>
+          <Button variant="secondary" size="sm">
+            Cancel
+          </Button>
+        </CardFooter>
       </Card>
 
-      <Label htmlFor="email">Label</Label>
-      <Input id="email" className="glass max-w-md"></Input>
+      <div className="space-x-2">
+        <Badge>Badge</Badge>
+        <Badge variant={"secondary"}>Badge</Badge>
+        <Badge variant={"destructive"}>Badge</Badge>
+        <Badge variant={"outline"}>Badge</Badge>
+      </div>
+
+      <Card className="max-w-md">
+        <CardHeader>
+          <CardTitle>Account Settings</CardTitle>
+          <CardDescription>Manage your profile information.</CardDescription>
+        </CardHeader>
+
+        <CardContent>
+          <p className="text-sm text-foreground">
+            This is the main card content.
+          </p>
+        </CardContent>
+
+        <Separator />
+        <CardHeader>
+          <CardTitle>Account Settings</CardTitle>
+          <CardDescription>Manage your profile information.</CardDescription>
+        </CardHeader>
+
+        <CardContent>
+          <p className="text-sm text-foreground">
+            This is the main card content.
+          </p>
+        </CardContent>
+      </Card>
     </div>
   );
 }
