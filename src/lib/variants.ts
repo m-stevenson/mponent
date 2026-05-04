@@ -2,16 +2,17 @@ import { cva } from "class-variance-authority";
 
 // Button
 export const buttonVariants = cva(
-  "inline-flex items-center justify-center rounded-md font-medium hover:cursor-pointer active:translate-y-[1px] transition-all duration-100",
+  "inline-flex items-center justify-center rounded-md font-medium hover:cursor-pointer active:translate-y-[1px]",
   {
     variants: {
       variant: {
         primary: "bg-primary text-white hover:bg-primary-foreground",
         secondary:
-          "border border-primary border-2 bg-background text-foreground hover:bg-muted",
+          "border border-secondary border-2 bg-background text-foreground hover:bg-secondary-foreground",
         destructive:
           "bg-destructive text-destructive-text hover:bg-destructive-highlight",
-        glass: "btn-glass text-cream",
+        ghost:
+          "bg-ghost text-foreground hover:bg-ghost-highlight",
       },
       size: {
         sm: "h-8 px-2 text-xs",
@@ -27,19 +28,16 @@ export const buttonVariants = cva(
 );
 
 // Label
-export const labelVariants = cva(
-  "",
-  {
-    variants: {
-      variant: {
-        default: "text-foreground",
-        muted:
-          "border border-primary border-2 bg-background text-foreground hover:bg-muted",
-        error: "",
-      },
-    },
-    defaultVariants: {
-      variant: "default",
+export const labelVariants = cva("", {
+  variants: {
+    variant: {
+      default: "text-foreground",
+      muted:
+        "border border-primary border-2 bg-background text-foreground hover:bg-muted",
+      error: "",
     },
   },
-);
+  defaultVariants: {
+    variant: "default",
+  },
+});
