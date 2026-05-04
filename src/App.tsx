@@ -56,7 +56,7 @@ function App() {
       </Card>
 
       <Label htmlFor="email">Label</Label>
-      <Input id="email" className="glass focus:ring-blue-100 focus:ring-2 max-w-md"></Input>
+      <Input id="email" className="glass max-w-md"></Input>
     </div>
   );
 }

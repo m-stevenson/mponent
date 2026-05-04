@@ -1,5 +1,6 @@
 import { cva } from "class-variance-authority";
 
+// Button
 export const buttonVariants = cva(
   "inline-flex items-center justify-center rounded-md font-medium hover:cursor-pointer active:translate-y-[1px] transition-all duration-100",
   {
@@ -13,7 +14,7 @@ export const buttonVariants = cva(
         glass: "btn-glass text-cream",
       },
       size: {
-        sm: "h-8 px-3 text-xs",
+        sm: "h-8 px-2 text-xs",
         md: "h-10 px-4 text-md",
         lg: "h-12 px-6 text-lg",
       },
@@ -25,25 +26,20 @@ export const buttonVariants = cva(
   },
 );
 
+// Label
 export const labelVariants = cva(
-  "inline-flex items-center justify-center rounded-md font-medium hover:cursor-pointer active:translate-y-[1px] transition-all duration-100",
+  "",
   {
     variants: {
       variant: {
-        default: "bg-primary text-white hover:bg-primary-foreground",
+        default: "text-foreground",
         muted:
           "border border-primary border-2 bg-background text-foreground hover:bg-muted",
         error: "",
       },
-      size: {
-        sm: "h-8 px-3 text-xs",
-        md: "h-10 px-4 text-md",
-        lg: "h-12 px-6 text-lg",
-      },
     },
     defaultVariants: {
       variant: "default",
-      size: "md",
     },
   },
 );
