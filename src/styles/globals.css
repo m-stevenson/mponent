@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@import "./tokens.css";
+@import "./effects.css";
+
+html {
+  background-color: var(--color-background);
+}
+
+h2,
+p {
+  cursor: default;
+}
