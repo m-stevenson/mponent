@@ -1,26 +1,23 @@
 :root {
-  --background: #ffffff;
+  --background: #f4f4f5;
   --foreground: #202020;
 
   --primary: #3db5ff;
   --primary-foreground: #79cbfd;
 
   --secondary: #3db5ff;
-  --secondary-foreground: #6dc7ff;
+  --secondary-foreground: #ebebeb;
 
   --destructive: #dd2235c4;
   --destructive-text: #ffcaca;
   --destructive-highlight: #f35363c4;
 
+  --ghost-highlight: #dadada;
+
   --border: #e5e7eb;
-  --muted: #f3f4f6;
+  --border-muted: #f1f5f9;
+  --border-strong: #cbcfd6;
 
-  --surface: #ffffff;
-  --surface-elevated: #f8fafc;
-
-  --surface-border: #e5e7eb;
-  --surface-highlight: rgba(255, 255, 255, 0.8);
-  --surface-shadow: rgba(0, 0, 0, 0.1);
 }
 
 .dark {
@@ -30,15 +27,14 @@
   --primary: #38bdf8;
   --primary-foreground: #6dc7ff;
 
+  --secondary: #3db5ff;
+  --secondary-foreground: #303030;
+
+  --ghost-highlight: #303030;
+
   --border: #27272a;
-  --muted: #18181b;
-
-  --surface: #18181b;
-  --surface-elevated: #1f1f23;
-
-  --surface-border: #27272a;
-  --surface-highlight: rgba(255, 255, 255, 0.055);
-  --surface-shadow: rgba(0, 0, 0, 0.6);
+  --border-muted: #1f1f23;
+  --border-strong: #404046;
 }
 
 @theme {
@@ -55,8 +51,12 @@
   --color-destructive-text: var(--destructive-text);
   --color-destructive-highlight: var(--destructive-highlight);
 
+  --color-ghost: var(--background);
+  --color-ghost-highlight: var(--ghost-highlight);
+
   --color-border: var(--border);
-  --color-muted: var(--muted);
+  --color-border-muted: var(--border-muted);
+  --color-border-strong: var(--border-strong);
 
   --color-cream: var(--cream);
   --color-sky: var(--sky);
