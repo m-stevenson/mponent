@@ -18,7 +18,7 @@ export function Navbar({ className }: { className?: string }) {
 
       {/* Navbar right */}
       <div className="flex items-center gap-4">
-        <Input placeholder="Search..."></Input>
+        <Input className="min-w-md" placeholder="Search..."></Input>
         <ThemeToggle variant="ghost" size="md" />
       </div>
     </nav>
